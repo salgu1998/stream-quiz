@@ -80,13 +80,11 @@ public class Quiz4 {
         Integer max = transactions.stream()
                 .map(Transaction::getValue)
                 .reduce(0, Integer::max);
-        System.out.println(max);
 
         Integer min = transactions.stream()
                 .map(Transaction::getValue)
                 .min((o1, o2) -> o1 - o2)
                 .orElse(0);
-        System.out.println(min);
         return new Integer[]{max, min};
     }
 
